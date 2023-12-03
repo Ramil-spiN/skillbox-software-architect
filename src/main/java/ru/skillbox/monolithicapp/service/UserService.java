@@ -95,7 +95,7 @@ public class UserService implements UserDetailsService {
         user.setAddress(userView.getAddress());
         user.setEmail(userView.getEmail());
         user.setFirstName(userView.getFirstName());
-        user.setLastName(userView.getFirstName());
+        user.setLastName(userView.getLastName());
         user.setUsername(userView.getLogin());
         user.setRoles(Collections.singleton(roleRepository.findByName(userRole)));
 
