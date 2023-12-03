@@ -1,0 +1,22 @@
+server:
+  port: 0
+  servlet:
+    context-path: /
+
+app:
+  template:
+    order-paid: "%s: ??? ????? ?%d ??????? ???????, ???????? ????????."
+
+spring:
+#  config:
+#    import: optional:configserver:http://localhost:8888
+  datasource:
+    driverClassName: org.postgresql.Driver
+    password: root
+    url: jdbc:postgresql://localhost:5432/skillbox-warehouse
+    username: postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    hibernate:
+      ddl-auto: update
+      show_sql: true

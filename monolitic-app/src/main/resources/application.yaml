@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+app:
+  template:
+    order-paid: "%s: Ваш заказ №%d успешно оплачен, ожидайте доставки."
+    order-coming: "%s: Ваш заказ №%d будет доставлен в течение 3 дней. Курьер: %s"
+    order-delivered: "%s: Спасибо, что воспользовались нашими услугами!"
+
+spring:
+  datasource:
+#    driverClassName: org.h2.Driver
+#    password:
+#    url: jdbc:h2:mem:testdb
+#    username: sa
+    driverClassName: org.postgresql.Driver
+    password: root
+    url: jdbc:postgresql://localhost:5432/skillbox-full
+    username: postgres
+  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    hibernate:
+      ddl-auto: update
+      show_sql: true
